@@ -1,0 +1,30 @@
+A big thank you to the authors of the following works that helped me create Procrastinate
+No More:
+
+Concept
+=======
+
+The concept of this widget is based on a Python Applet called Tomate:
+https://gitorious.org/tomate/pages/Home
+
+Source code
+===========
+
+The source code of the following widgets were helpful when coding Procrastinate No More:
+
+Activity Manager Plasmoid - used as a starting point.
+http://kde-look.org/content/show.php/Activity+Manager+Plasmoid?content=136278
+
+Toggle-Compositing - to see how to draw the icons.
+http://kde-look.org/content/show.php/Toggle-Compositing?content=78299
+
+Bubblemon - to solve the sizing issues and handle themes.
+(part of kdeplasma-addons)
+
+Icons
+=====
+
+The icons are derived from the Oxygen icon theme (http://www.oxygen-icons.org/) and licensed
+under the Creative Common Attribution-ShareAlike 3.0 License and the GNU Library General
+Public License.
+
