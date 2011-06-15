@@ -48,7 +48,8 @@ The widget can be added to the desktop, a panel or to the system tray.
 3. After 10 minutes the widget turns green. Now you can either continue to work, or do
 something else.
 4. When you stop working, regardless if the 10 minutes have passed or not, click on the 
-widget again. It is now back to its idle state with a blue icon.
+widget again. It is now back to its idle state (blue icon) and the tooltip tells you for
+how long you worked.
 5. Rinse and repeat.
 
 Configuration options
