@@ -19,15 +19,15 @@
 
 #include "tomat.h"
 
-#include <Plasma/Svg>
-#include <Plasma/Theme>
-#include <Plasma/ToolTipContent>
-#include <Plasma/ToolTipManager>
-
 #include <QtCore/QSizeF>
 #include <QtCore/QTimer>
 #include <QtGui/QGraphicsSceneMouseEvent>
 #include <QtGui/QPainter>
+
+#include <Plasma/Svg>
+#include <Plasma/Theme>
+#include <Plasma/ToolTipContent>
+#include <Plasma/ToolTipManager>
 
 Tomat::Tomat(QObject *parent, const QVariantList &args)
     : Plasma::Applet(parent, args),
@@ -53,6 +53,7 @@ void Tomat::init()
 
     connect(&workingTimer, SIGNAL(timeout()), this, SLOT(updateTime()));
     connect(Plasma::Theme::defaultTheme(), SIGNAL(themeChanged()), this, SLOT(reloadTheme()));
+    connect(this, SIGNAL(activate()), this, SLOT(manuallySwitchState()));
 }
 
 void Tomat::paintInterface(QPainter *p,
@@ -124,13 +125,7 @@ void Tomat::mousePressEvent(QGraphicsSceneMouseEvent *event)
 
     if (event->buttons() == Qt::LeftButton &&
         contentsRect().contains(event->pos())) {
-
-        if (currentState == IDLE) {
-            setState(WORKING);
-        } else {
-            setState(IDLE);
-        }
-
+        manuallySwitchState();
         return;
     }
 
@@ -163,6 +158,15 @@ void Tomat::setState(State newState)
     oldState = currentState;
     currentState = newState;
     update();
+}
+
+void Tomat::manuallySwitchState()
+{
+    if (currentState == IDLE) {
+        setState(WORKING);
+    } else {
+        setState(IDLE);
+    }
 }
 
 QString Tomat::getTime()

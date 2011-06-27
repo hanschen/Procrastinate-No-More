@@ -20,12 +20,11 @@
 #ifndef TOMAT_H
 #define TOMAT_H
 
-#include <Plasma/Applet>
-#include <Plasma/Svg>
-
 #include <QTimer>
 #include <QString>
 
+#include <Plasma/Applet>
+#include <Plasma/Svg>
 
 enum State {IDLE, WORKING, OK};
 
@@ -49,13 +48,14 @@ class Tomat : public Plasma::Applet
     public slots:
         void toolTipAboutToShow();
         void toolTipHidden();
-        void setState(State newState);
 
     protected:
         QString getTime();
         QString getToolTip();
 
     private slots:
+        void setState(State newState);
+        void manuallySwitchState();
         void resetToolTip();
         void updateTime();
         void reloadTheme();
@@ -66,7 +66,6 @@ class Tomat : public Plasma::Applet
         State currentState; 
         State oldState; 
         int secondsWorking;
-        
 };
 
 #endif
