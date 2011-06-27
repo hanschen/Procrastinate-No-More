@@ -1,3 +1,10 @@
+0.2
+---
+- Add support for keyboard shortcut
+
+NOTE: If the widget is in the system tray, the shortcut is not saved between
+logins due to a bug (https://bugs.kde.org/show_bug.cgi?id=260685)
+
 0.1
 ---
 - Initial release

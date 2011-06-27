@@ -1,5 +1,5 @@
 =========================
-Procrastinate No More 0.1
+Procrastinate No More 0.2
 =========================
 
 Description
@@ -65,7 +65,7 @@ represent the different states, see the short description below.
 Change minimum working time
 ===========================
 
-The minimum working time (10 minutes by default) is defined in src/tomat.h on line 47:
+The minimum working time (10 minutes by default) is defined in src/tomat.h on line 46:
 
     enum { MIN_WORK_TIME = 10*60 }; // minimum working time in seconds
 
