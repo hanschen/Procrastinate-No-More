@@ -29,15 +29,13 @@ Installation
 If possible, it is recommended that you install this widget through your package manager.
 The typical procedure to compile it from source is as follows:
 
-```
-mkdir build
-cd build
-cmake -DCMAKE_INSTALL_PREFIX=`kde4-config --prefix` ..
-make
-make install
-```
+    mkdir build
+    cd build
+    cmake -DCMAKE_INSTALL_PREFIX=`kde4-config --prefix` ..
+    make
+    make install
 
-The last command usually requires root permissions so you probably need to use su/sudo
+The last command usually requires root permissions so you probably need to use `su`/`sudo`
 or similar commands.
 
 How to use
@@ -67,22 +65,20 @@ represent the different states, see the short description below.
 Change minimum working time
 ---------------------------
 
-The minimum working time (10 minutes by default) is defined in src/tomat.h on line 46:
+The minimum working time (10 minutes by default) is defined in `src/tomat.h` on line 46:
 
     enum { MIN_WORK_TIME = 10*60 }; // minimum working time in seconds
 
-Change 10*60 to whatever time you want (given in seconds). It is necessary to recompile
+Change `10*60` to whatever time you want (given in seconds). It is necessary to recompile
 the widget after making the change.
 
 Change state icons
 ------------------
 
-The icons can be defined by the Plasma Workspace theme (widgets/work_state.svgz).
+The icons can be defined by the Plasma Workspace theme (`widgets/work_state.svgz`).
 The default icons are located in the file
 
-```
-<kde prefix>/share/apps/desktoptheme/default/widgets/work_state.svgz
-```
+    <kde prefix>/share/apps/desktoptheme/default/widgets/work_state.svgz
 
 where `<kde prefix>` can be found with the command `kde4-config --prefix` (usually `/usr`).
 The SVG file contains three icons with the following id for the different states:
