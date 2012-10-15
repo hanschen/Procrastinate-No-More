@@ -1,9 +1,8 @@
-=========================
-Procrastinate No More 0.2
-=========================
+Procrastinate No More
+=====================
 
 Description
-===========
+-----------
 
 Procrastinate No More is a simple widget for the KDE Plasma Workspaces to help you avoid 
 procrastination. It is inspired by a Python applet called Tomate, which you can read more
@@ -24,22 +23,24 @@ the task might seem, while it should let you stay concentrated long enough to pi
 flow.
 
 Installation
-============
+------------
 
 If possible, it is recommended that you install this widget through your package manager.
 The typical procedure to compile it from source is as follows:
 
+```
 mkdir build
 cd build
 cmake -DCMAKE_INSTALL_PREFIX=`kde4-config --prefix` ..
 make
 make install
+```
 
 The last command usually requires root permissions so you probably need to use su/sudo
 or similar commands.
 
 How to use
-==========
+----------
 
 The widget can be added to the desktop, a panel or to the system tray.
 
@@ -53,7 +54,7 @@ how long you worked.
 5. Rinse and repeat.
 
 Configuration options
-=====================
+---------------------
 
 Procrastinate No More follows the path of its inspiration (Tomate) and tries to be as
 simple as possible. For that reason it only has the most essential features and no
@@ -63,7 +64,7 @@ For those who absolutely have to change the minimum working time or the icons th
 represent the different states, see the short description below.
 
 Change minimum working time
-===========================
+---------------------------
 
 The minimum working time (10 minutes by default) is defined in src/tomat.h on line 46:
 
@@ -73,22 +74,24 @@ Change 10*60 to whatever time you want (given in seconds). It is necessary to re
 the widget after making the change.
 
 Change state icons
-==================
+------------------
 
 The icons can be defined by the Plasma Workspace theme (widgets/work_state.svgz).
 The default icons are located in the file
 
-    <kde prefix>/share/apps/desktoptheme/default/widgets/work_state.svgz
+```
+<kde prefix>/share/apps/desktoptheme/default/widgets/work_state.svgz
+```
 
-where <kde prefix> can be found with the command `kde4-config --prefix` (usually /usr).
+where `<kde prefix>` can be found with the command `kde4-config --prefix` (usually `/usr`).
 The SVG file contains three icons with the following id for the different states:
 
-idle
-working
-ok
+- `idle`
+- `working`
+- `ok`
 
 Trivia
-======
+------
 
 - Internally Procrastinate No More goes by the name "Tomat", Swedish for tomato. The name
 comes from the applet it is inspired by, Tomate, which in turn is named that way because
