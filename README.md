@@ -5,6 +5,8 @@ Procrastinate No More is a simple widget for the KDE Plasma Workspaces to help y
 procrastination. It is inspired by a Python applet called Tomate, which you can read more
 about here: https://gitorious.org/tomate/pages/Home
 
+![](http://kde-apps.org/CONTENT/content-pre3/142783-3.png)
+
 
 Description
 -----------
