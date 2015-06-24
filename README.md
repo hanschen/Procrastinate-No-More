@@ -41,6 +41,12 @@ The typical procedure to compile it from source is as follows:
 The last command usually requires root permissions so you probably need to use `su`/`sudo`
 or similar commands.
 
+If you have Qt5 installed and get an error about `QT_QT_UNCLUDE_DIR is unset`, you can try
+to specify the path to the Qt4 version of qmake using the `-DQT_QMAKE_EXECUTABLE` flag,
+e.g.
+
+    cmake -DCMAKE_INSTALL_PREFIX=`kde4-config --prefix` -DQT_QMAKE_EXECUTABLE=/usr/bin/qmake-qt4 ..
+
 
 How to use
 ----------
