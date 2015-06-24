@@ -103,4 +103,3 @@ comes from the applet it is inspired by, Tomate, which in turn is named that way
 the concept is similar to the popular Pomodoro technique. ("Pomodoro" is tomato in
 Italian.)
 - The author started coding this widget just before one of his final exams.
-
