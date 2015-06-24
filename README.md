@@ -25,6 +25,7 @@ Why 10 minutes? It is short enough to always be doable, no matter how boring or 
 the task might seem, while it should let you stay concentrated long enough to pick up the
 flow.
 
+
 Installation
 ------------
 
@@ -40,6 +41,7 @@ The typical procedure to compile it from source is as follows:
 The last command usually requires root permissions so you probably need to use `su`/`sudo`
 or similar commands.
 
+
 How to use
 ----------
 
@@ -54,6 +56,7 @@ widget again. It is now back to its idle state (blue icon) and the tooltip tells
 how long you worked.
 5. Rinse and repeat.
 
+
 Configuration options
 ---------------------
 
@@ -64,6 +67,7 @@ options you can waste time tweaking.
 For those who absolutely have to change the minimum working time or the icons that 
 represent the different states, see the short description below.
 
+
 Change minimum working time
 ---------------------------
 
@@ -73,6 +77,7 @@ The minimum working time (10 minutes by default) is defined in `src/tomat.h` on 
 
 Change `10*60` to whatever time you want (given in seconds). It is necessary to recompile
 the widget after making the change.
+
 
 Change state icons
 ------------------
@@ -88,6 +93,7 @@ The SVG file contains three icons with the following id for the different states
 - `idle`
 - `working`
 - `ok`
+
 
 Trivia
 ------
